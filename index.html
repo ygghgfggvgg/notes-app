@@ -9,10 +9,22 @@
 <body>
     <div class="container">
         <h1>我的学习笔记</h1>
-        <textarea id="note-input" placeholder="输入你的笔记..."></textarea>
-        <button id="save-note">保存笔记</button>
+        <div class="input-section">
+            <input type="text" id="search-input" placeholder="搜索笔记...">
+            <textarea id="note-input" placeholder="输入你的笔记..."></textarea>
+            <div id="note-preview"></div>
+            <select id="note-category">
+                <option value="默认">默认</option>
+                <option value="工作">工作</option>
+                <option value="学习">学习</option>
+                <option value="生活">生活</option>
+            </select>
+            <button id="save-note">保存笔记</button>
+            <button id="export-notes">导出笔记</button>
+        </div>
         <div id="notes-list"></div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
